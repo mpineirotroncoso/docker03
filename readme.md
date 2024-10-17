@@ -14,7 +14,11 @@ sudo docker run -p 8080:80 -v /home/marcos/htdocs:/usr/local/apache2/htdocs --na
 ```
 
 ### Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
+Si, funciona
 ### Crea otro contenedor 'dam_web2' con el mismo bind mount y a otro puerto, por ejemplo 9080.
+```sh
+sudo docker run -p 9080:80 -v /home/marcos/htdocs:/usr/local/apache2/htdocs --name dam_web2 httpd
+```
 ### Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
 > http://localhost:9080 
 > http://localhost:8000
